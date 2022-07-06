@@ -6,7 +6,8 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions"
+    "@storybook/addon-interactions",
+    '@storybook/addon-a11y'
   ],
   "framework": "@storybook/vue3",
   "core": {
@@ -14,18 +15,5 @@ module.exports = {
   },
   "features": {
     "storyStoreV7": true
-  },
-  webpackFinal: async (config) => {
-		config.module.rules.push({
-			test: /\.css$/,
-			use: [
-				{
-					loader: 'postcss-loader',
-				},
-			],
-			include: path.resolve(__dirname, '../src'),
-		});
-
-		return config;
-	},
+  }
 }

@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    class="text-3xl font-bold underline"
+    class="underline"
     :class="classes"
     @click="onClick"
     :style="style"
