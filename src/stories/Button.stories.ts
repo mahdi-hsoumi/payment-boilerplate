@@ -8,7 +8,7 @@ export default {
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
     backgroundColor: { control: "color" },
-    onClick: {},
+    onClick: { action: "clicked" },
     size: {
       control: { type: "select" },
       options: ["small", "medium", "large"],
@@ -32,6 +32,12 @@ export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
   label: "Button",
+};
+Primary.parameters = {
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/Aqof2MFAjnPLbi5xXKpjTz/Untitled?node-id=29%3A21",
+  },
 };
 
 export const Secondary = Template.bind({});
